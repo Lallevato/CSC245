@@ -1,0 +1,2686 @@
+<html xmlns:graph="graph" xmlns:results="results">
+<head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <style type="text/css">
+    BODY,P,OL,TD,pre{font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-style: normal;color: #000000;}
+    .textArea {width:99%; height: 235px; padding:0.5%; resize: none; border:1px; border-style: solid; border-color: #CBCBCB; outline: none; overflow:auto;}
+
+    A:link {font-family: Arial, Helvetica, sans-serif;font-style: normal;color: #990000;text-decoration: none;}
+    A:active {font-family: Arial, Helvetica, sans-serif;font-style: normal;color: #990000;text-decoration: none;}
+    A:visited {font-family: Arial, Helvetica, sans-serif;font-style: normal;color: #999999;text-decoration: none;}
+    A:hover {font-family: Arial, Helvetica, sans-serif;font-style: normal;color: #990000;text-decoration: underline;}
+    A.gray_link:link {font-family: Arial;font-size: 12px;color: #666666;text-decoration: none;}
+    A.gray_link:active {font-family: Arial;font-size: 12px;color: #666666;text-decoration: none;}
+    A.gray_link:visited {font-family: Arial;font-size: 12px;color: #666666;text-decoration: none;}
+    A.gray_link:hover {font-family: Arial;font-size: 12px;color: #666666;text-decoration: underline;}
+    A.red_link:link {font-family: Arial;font-size: 12px;color: #990000;text-decoration: none;}
+    A.red_link:active {font-family: Arial;font-size: 12px;color: #990000;text-decoration: none;}
+    A.red_link:visited {font-family: Arial;font-size: 12px;color: #990000;text-decoration: none;}
+    A.red_link:hover {font-family: Arial;font-size: 12px;color: #990000;text-decoration: underline;}
+    A.green_link:link {font-family: Arial;font-size: 12px;color: #008040;text-decoration: none;}
+    A.green_link:active {font-family: Arial;font-size: 12px;color: #008040;text-decoration: none;}
+    A.green_link:visited {font-family: Arial;font-size: 12px;color: #008040;text-decoration: none;}
+    A.green_link:hover {font-family: Arial;font-size: 12px;color: #008040;text-decoration: underline;}
+    A.black_link:link {font-family: Arial;font-size: 12px;color: #000000;text-decoration: none;}
+    A.black_link:active {font-family: Arial;font-size: 12px;color: #000000;text-decoration: none;}
+    A.black_link:visited {font-family: Arial;font-size: 12px;color: #000000;text-decoration: none;}
+    A.black_link:hover {font-family: Arial;font-size: 12px;color: #000000;text-decoration: underline;}
+
+    A.blue_link:link {font-family: Arial;font-size: 12px;color: #0093D2;text-decoration: none;}
+    A.blue_link:active {font-family: Arial;font-size: 12px;color: #0093D2;text-decoration: none;}
+    A.blue_link:visited {font-family: Arial;font-size: 12px;color: #0093D2;text-decoration: none;}
+    A.blue_link:hover {font-family: Arial;font-size: 12px;color: #0093D2;text-decoration: underline;}
+
+    A.gray_red_link:link {font-family: Arial;font-size: 12px;color: #666666;text-decoration: none;}
+    A.gray_red_link:active {font-family: Arial;font-size: 12px;color: #666666;text-decoration: none;}
+    A.gray_red_link:visited {font-family: Arial;font-size: 12px;color: #666666;text-decoration: none;}
+    A.gray_red_link:hover {font-family: Arial;font-size: 12px;color: #666666;text-decoration: none;}
+    DIV.suite_details{background:#EDEDED;padding:8px}
+
+    DIV.test_comment{color:#666666;}
+
+    DIV.arr_right
+    {
+        position: relative;
+        left: +1px;
+        top: +3px;
+        height: 0px;
+        width: 0;
+        border-left: 5px solid #FFFFFF;
+        border-right: 5px solid transparent;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+    }
+    DIV.arr_down
+    {
+        position: relative;
+        left: -3px;
+        top: +5px;
+        height: 0px;
+        width: 0;
+        border-top: 5px solid #FFFFFF;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+       }
+
+    TABLE.main_header_top {
+         padding: 10px;
+         background: #333333;
+         border-spacing: 0px;
+    }
+
+    TABLE.main_header {
+         padding-top:2px;
+         padding-bottom:1px;
+         background: #006699;
+         text-align: center;
+    }
+
+    FONT.main_header {
+         font-size: 28px;
+         font-family: Arial, Helvetica, sans-serif;
+         color: #FFFFFF;
+    }
+
+    TABLE.main_header_small {
+         padding-top:1px;
+         padding-bottom:2px;
+         background: #006699;
+         text-align:center;
+    }
+
+    TABLE.header_separator {
+         padding-top:1px;
+         padding-bottom:2px;
+         background: #CCCCCC;
+         text-align:center;
+    }
+
+    FONT.main_header_small {
+         font-size: 12px;
+         font-family: Arial, Helvetica, sans-serif;
+         color: #FFFFFF;
+    }
+    
+    DIV.section_header { 
+         padding: 8px; 
+         color: #FFFFFF; 
+         font-size: 14px;
+         font-family: Arial, Helvetica, sans-serif;
+         background: #004877;
+    }
+
+    TABLE.section_header { 
+         padding: 8px; 
+         color: #FFFFFF; 
+         font-size: 14px;
+         font-family: Arial, Helvetica, sans-serif;
+         background: #004877;
+    }
+
+    DIV.header{ padding-top: 10px; font-size: 32px; FONT-FAMILY: Arial, sans-serif; COLOR:#000000 }
+    DIV.small_header{ padding-top: 5px; padding-bottom: 5px; font-size: 28px; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #000000 }
+    FONT.title{font-size: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #000000 }
+    FONT.gray {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #999999;}    
+    FONT.gray2, FONT.gray_red {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #666666;}
+    FONT.white {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #FFFFFF;}
+    FONT.time {font-size: 11px;font-family: Arial, Helvetica, sans-serif;color: #000000;}
+    FONT.black {font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-style: normal;color: #000000;}
+    FONT.red {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #990000;}
+    FONT.red2 {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #990000; text-decoration: underline;}
+    FONT.blue {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #427fb6;}
+    FONT.green {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #008040;}
+    FONT.orange {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #F69500;}
+    FONT.goldenrod {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #DAA520;}    
+    FONT.small {font-size: 3px;font-family: Arial, Helvetica, sans-serif;color: #cccccc;}
+    IMG.screenshot{float:left; margin-right: 20px; }
+    SELECT.cs_authors {font-family: Arial, Helvetica, sans-serif;font-size: 12px;}  
+    SELECT.ju_authors {font-family: Arial, Helvetica, sans-serif;font-size: 12px;}  
+    SPAN.toggle_button{width: 16px; padding-right: 2px; display: inline-block;cursor: pointer;} 
+    TD.associations{vertical-align: top;}
+    TD.collapse_controls{text-align:right;}
+    TD.cs_authors{font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-style: normal;color: #000000;border: 1px; bordercolor: #d9c8ac;}
+    TD.error{background-color:#F2C6C5}
+    TD.errorsingleborder{ padding:8px; background-color:#F2C6C5;}
+
+    TD.summary_cell { padding: 5px; padding-left: 20px; color: #000000; font-size: 13px; font-family: Arial, Helvetica, sans-serif; background: #EDEDED }
+    TD.summary_stats_cell { padding: 5px; padding-left: 20px; color: #000000; font-size: 14px; font-family: Arial, Helvetica, sans-serif; background: #FFFFFF }
+    TABLE.summary_stats_cell { border: 1px solid #000000 }
+
+    TD.section_header
+    {
+        padding: 0px;
+        color:#FFFFFF; 
+        background-color:#004877;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    TD.header_separator
+    {
+        padding: 0px;
+        color:#FFFFFF; 
+        background-color: #CCCCCC;
+    }
+
+    TD.testSuiteTree {padding-top:4px;padding-bottom:4px;}
+    TD.singleborder{ padding:8px;}
+    TD.right_separator{ border-right:1px #FFFFFF solid}
+    TD.left_separator{ border-left:1px #FFFFFF solid}
+    TD.left_separator_gray{ border-left:1px #ceced2 solid}
+    TD.right_separator_gray{ border-right:1px #ceced2 solid}
+    TD.top_separator_gray{ border-top:1px #ceced2 solid}
+    TD.bottom_separator_gray{ border-bottom:1px #ceced2 solid}
+    TABLE.header{background-color:#FFFFFF}
+    TABLE.singleborder{}
+    TABLE.doubleborder{}
+    TABLE.singleborder_blue{}
+    TABLE.singleborder_main{}
+    TD.fixed_width{width: 150px;}
+    TD.no_error{}
+    TD.suite_details{padding-top:2px; padding-bottom:2px }
+    UL.metrics {font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-style: normal;color: #000000; list-style-type: none; margin: 0; padding-left:12px;}
+    UL.root {font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-style: normal;color: #000000; list-style-type: none; margin: 0; padding-left:0px; margin-left:3px;}
+    UL {font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-style: normal;color: #000000; list-style-type: none; margin: 0; padding-left:0px; margin-left:12px;}
+    LI.tree {padding-top:2px; padding-bottom:2px; font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-style: normal;color: #000000; list-style-type: none; margin: 0; padding-left: 0px;}
+
+    LI.root { 
+        margin: 0;
+        padding-left: 0px;
+        padding-top:8px;
+        padding-bottom:8px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        color: #000000; 
+        list-style-type: none;
+        
+            background-color: #CCCCCC; 
+        
+    }
+
+    TD.root {
+        padding-top:8px;
+        padding-bottom:8px;
+        
+            background-color: #CCCCCC; 
+         
+    }
+    TD.tree { padding-top:2px; padding-bottom:2px;}
+
+    PRE.tree { line-height: 16px; margin:0px; }
+
+    tr.alternated { background-color: #EDEDED }
+    tr.alternating:nth-child(even) { background-color: #EDEDED }
+    li.alternating:nth-child(even) { background-color: #EDEDED }
+
+    tr.errorsingleborder:nth-child(even) { background-color: #F2C6C5 }
+    tr.errorsingleborder:nth-child(odd)  { background-color: #F7D3D2 }
+    tr.no_errorsingleborder { }
+    
+    #foldheader{cursor:pointer;cursor:hand ;}
+    #cs_foldheader{cursor:pointer;cursor:hand ;}
+    #cr_foldheader{cursor:pointer;cursor:hand ;}
+    #metrics_foldheader{cursor:pointer;cursor:hand ;}
+    #exec_foldheader{cursor:pointer;cursor:hand ;}
+    #paramsHeader {word-break:break-all;overflow: auto; padding: 3px;}
+    </style><title>Jtest&nbsp;Report&nbsp;[2022-04-14T12:39:39-06:00]
+
+</title><script language="JavaScript">
+    var nwin;
+    function openWin (loc_to_open) {
+       if (!nwin || nwin.closed) {
+          nwin = window.open(loc_to_open,'');
+       } else {
+          nwin.location = loc_to_open;
+       }
+       nwin.focus();
+    }
+    function openDevReport (dev_rep_name) {
+       openWin(dev_rep_name);
+    }
+    </script><script language="JavaScript">
+    function sortBySeverity(urgent){
+    if(urgent != null)  {
+        sev=document.getElementById("cs_sevtrue");
+        sev_link=document.getElementById("cs_link_sevtrue");
+        sev_title=document.getElementById("cs_title_sevtrue");
+    } else {
+        sev=document.getElementById("cs_sev");
+        sev_link=document.getElementById("cs_link_sev");
+        sev_title=document.getElementById("cs_title_sev");
+    }
+    if(sev != null) sev.style.display='block';
+    if(sev_title != null) sev_title.style.display='block';
+    if(sev_link != null) {
+       sev_link.className="gray_red_link";
+    }
+    if(urgent != null)  {
+        cat=document.getElementById("cs_cattrue");
+        cat_link=document.getElementById("cs_link_cattrue");
+        cat_title=document.getElementById("cs_title_cattrue");
+    } else {
+        cat=document.getElementById("cs_cat");
+        cat_link=document.getElementById("cs_link_cat");
+        cat_title=document.getElementById("cs_title_cat");
+    }
+    if(cat != null) cat.style.display='none';
+    if(cat_title != null) cat_title.style.display='none';
+    if(cat_link != null) {
+       cat_link.className="blue_link";
+    }
+    }
+
+    function sortByCategory(urgent){
+    if(urgent != null)  {
+        sev=document.getElementById("cs_sevtrue");
+        sev_link=document.getElementById("cs_link_sevtrue");
+        sev_title=document.getElementById("cs_title_sevtrue");
+    } else {
+        sev=document.getElementById("cs_sev");
+        sev_link=document.getElementById("cs_link_sev");
+        sev_title=document.getElementById("cs_title_sev");
+    }
+    if(sev != null) sev.style.display='none';
+    if(sev_title != null) sev_title.style.display='none';
+    if(sev_link != null) { 
+        sev_link.className="blue_link";
+    }       
+    if(urgent != null)  {
+        cat=document.getElementById("cs_cattrue");
+        cat_link=document.getElementById("cs_link_cattrue");
+        cat_title=document.getElementById("cs_title_cattrue");
+    } else {
+        cat=document.getElementById("cs_cat");
+        cat_link=document.getElementById("cs_link_cat");
+        cat_title=document.getElementById("cs_title_cat");
+    }
+    if(cat != null) cat.style.display='block';
+    if(cat_title != null) cat_title.style.display='block';
+    if(cat_link != null) { 
+        cat_link.className="gray_red_link";
+    }
+    }
+    </script><script language="JavaScript">
+    var ns6=document.getElementById && !document.all
+    var ie4=document.all && navigator.userAgent.indexOf("Opera")==-1
+
+    function checkcontained(e)
+    {
+       cur=ns6 ? e.target : event.srcElement;
+
+       checkFor("foldinglist", "foldheader", cur);
+       checkFor("cs_foldinglist", "cs_foldheader", cur);
+       checkFor("cr_foldinglist", "cr_foldheader", cur);
+       checkFor("metrics_foldinglist", "metrics_foldheader", cur);
+       checkFor("exec_foldinglist", "exec_foldheader", cur);
+    }
+
+    function toggleDiv(divSectionId)
+    {
+        var divArrowId = divSectionId + "_arrow";
+        if (document.getElementById(divSectionId).style.display == "none") {
+            document.getElementById(divSectionId).style.display = "";
+            document.getElementById(divArrowId).className="arr_down";
+        } else {
+            document.getElementById(divSectionId).style.display = "none";
+            document.getElementById(divArrowId).className="arr_right";
+        }
+    }
+
+    function checkFor(foldinglist, foldheader, cur)
+    {
+        var iscontained=0;
+        i = 0;
+        if (cur.id==foldheader) {
+           iscontained=1;
+        } 
+        while (ns6 && cur.parentNode || (ie4 && cur.parentElement)) {
+             if (cur.id==foldheader||cur.id==foldinglist){
+                iscontained=(cur.id==foldheader)? 1 : 0;
+                break;
+             }
+             cur=ns6? cur.parentNode : cur.parentElement;
+        }
+
+        if (iscontained) {
+           var foldercontent=ns6? cur.nextSibling.nextSibling : cur['nextSibling'];
+           if (foldercontent.style.display=="none"){
+               foldercontent.style.display="";
+           } else {
+               foldercontent.style.display="none";
+           }
+        }
+    }
+    function expandCSDetails() {
+       expandCollapseAll("cs_foldinglist", true);
+    }
+
+    function collapseCSDetails() {
+       expandCollapseAll("cs_foldinglist", false);
+    }
+
+    function expandCRDetails() {
+    expandCollapseAll("cr_foldinglist", true);
+    }
+
+    function collapseCRDetails() {
+    expandCollapseAll("cr_foldinglist", false);
+    }
+
+    function expandMetricsDetails() {
+    expandCollapseAll("metrics_foldinglist", true);
+    }
+
+    function collapseMetricsDetails() {
+    expandCollapseAll("metrics_foldinglist", false);
+    }
+
+    function expandExecDetails() {
+       expandCollapseAll("exec_foldinglist", true);
+    }
+
+    function collapseExecDetails() {
+       expandCollapseAll("exec_foldinglist", false);
+    }
+
+    function expandCvgDetails() {
+       expandCollapseAll("cvg_foldinglist", true);
+    }
+
+    function collapseCvgDetails() {
+       expandCollapseAll("cvg_foldinglist", false);
+    }
+
+    function expandCollapseAll(foldinglistID, collapse)
+    {
+        if (document.getElementById && document.createElement) {
+            m = document.getElementById(foldinglistID).getElementsByTagName('ul');
+            var i;
+            for (i = 0; i < m.length; i++) {
+              if (collapse) {
+                 m[i].style.display='block';
+              } else {
+                 m[i].style.display='none';
+              }
+            }
+        }
+    }
+
+    function expandViolaion(headerID, violationID, startIndex)
+    {
+        var violation = document.getElementById(violationID);
+        var m = document.getElementById(headerID).getElementsByTagName('td');
+        
+        if (violation.style.display === '') {
+            violation.style.display = 'none';
+            for (i = startIndex; i < m.length; i++) {
+                m[i].style.backgroundColor = "#FFFFFF";
+            }
+        }
+        else{
+            violation.style.display = '';
+            for (i = startIndex; i < m.length; i++) {
+                m[i].style.backgroundColor = "#E0E0E0";
+            }        
+        }
+    }
+
+    if (ie4||ns6) {
+       document.onclick=checkcontained;
+    }
+    </script></head>
+<body bgcolor="#FFFFFF" style="margin:0;padding:0">
+<table class="singleborder_main" width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table xmlns:textutil="textutil" xmlns:authors="authors" width="100%" class="main_header_top">
+<tr></tr>
+</table>
+<table xmlns:textutil="textutil" xmlns:authors="authors" width="100%" class="main_header">
+<tr>
+<td width="20%" align="left" class="main_header"><img src="rep_header_logo_x10.png"></td>
+<td width="60%" class="main_header">
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td class="main_header">
+<table width="100%" class="main_header">
+<tr>
+<td align="center" class="main_header"><font class="main_header">Parasoft&nbsp;Jtest&nbsp;Report</font></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" class="main_header_small">
+<tr>
+<td align="center" class="main_header_small"><font class="main_header_small">Jtest&nbsp;2021.2.1</font></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+<td width="20%" class="main_header"></td>
+</tr>
+</table><br xmlns:textutil="textutil" xmlns:authors="authors"><table width="100%" style="padding-bottom:10px;padding-top:0px" cellspacing="0">
+<tr>
+<td align="center">
+<table width="100%" class="singleborder_blue" style="padding-left:25px;padding-right:25px;padding-bottom:25px;padding-top:5px" cellspacing="0" bgcolor="#FFFFFF">
+<tr>
+<td>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td colspan="2">
+<table width="100%" cellpadding="0" cellspacing="0" class="section_header">
+<tr>
+<td>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td class="section_header">Session Summary</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="summary_cell">
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td width="20%" class="summary_cell" style="white-space: nowrap; vertical-align: baseline;"><b>Build ID:</b></td>
+<td class="summary_cell" style="word-break: break-word;">2022-04-14</td>
+</tr>
+<tr>
+<td class="summary_cell" style="white-space: nowrap; vertical-align: baseline;"><b>Test Configuration:</b></td>
+<td class="summary_cell" style="word-break: break-word;">builtin://CERT for Java</td>
+</tr>
+<tr>
+<td class="summary_cell" style="white-space: nowrap; vertical-align: baseline;"><b>Started:</b></td>
+<td class="summary_cell">2022-04-14T12:39:39-06:00</td>
+</tr>
+<tr>
+<td class="summary_cell" style="white-space: nowrap; vertical-align: baseline;"><b>Performed on:</b></td>
+<td class="summary_cell">Beastie by lukea</td>
+</tr>
+<tr>
+<td class="summary_cell" style="white-space: nowrap; vertical-align: baseline;"><b>Session Tag:</b></td>
+<td class="summary_cell" style="word-break: break-word;">${scontrol_branch}-win32_x86_64</td>
+</tr>
+<tr>
+<td class="summary_cell" style="white-space: nowrap; vertical-align: baseline;"><b>Project:</b></td>
+<td class="summary_cell"></td>
+</tr>
+</table>
+</td>
+<td class="summary_cell" align="right" valign="top" style="padding-right:60px;"><br><table width="400px" class="summary_stats_cell" cellpadding="0" bgcolor="#FFFFFF" cellspacing="0">
+<tr>
+<td>
+<table width="100%" cellpadding="0" bgcolor="#FFFFFF" cellspacing="0">
+<tr>
+<td class="summary_stats_cell"><a xmlns:textutil="textutil" xmlns:authors="authors" class="blue_link" style="font-size: 14px" href="#cs"><b>Static Analysis</b></a></td>
+<td class="summary_stats_cell">Severity 1 Findings: 0</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><a xmlns:textutil="textutil" xmlns:authors="authors" name="cs"></a>&nbsp;
+<table xmlns:textutil="textutil" xmlns:authors="authors" width="100%" cellpadding="0" cellspacing="0" class="section_header">
+<tr>
+<td>
+<table cellpadding="0" cellspacing="0">
+<tr>
+<td class="section_header">Summary - Static Analysis</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table xmlns:textutil="textutil" xmlns:authors="authors" width="100%" cellpadding="2" cellspacing="0">
+<tr>
+<td align="center"><img src="standard_summary_04-14-22_12-39-39.jpeg" alt="standard_summary_04-14-22_12-39-39.jpeg"></td>
+</tr>
+</table>&nbsp;
+<table xmlns:textutil="textutil" xmlns:authors="authors" width="100%" cellpadding="0" cellspacing="0" class="section_header" onclick="javascript:toggleDiv('cs_details_section')">
+<tr>
+<td>
+<table cellpadding="0" cellspacing="0">
+<tr cols="2">
+<td class="section_header" valign="top">
+<div style="display:table-cell" class="arr_down" id="cs_details_section_arrow"><span style="zoom:1;"></span></div>
+</td>
+<td class="section_header">Details - Static Analysis</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<div xmlns:textutil="textutil" id="cs_details_section">
+<table class="header" width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td width="15%"></td>
+<td align="center">
+<div class="header">Static Analysis</div>
+</td>
+<td width="15%" align="right" valign="bottom"></td>
+</tr>
+</table><br><table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td width="80%">
+<table width="100%" class="singleborder" cellpadding="0" cellspacing="0">
+<tr>
+<td class="singleborder right_separator" width="40%" align="center" bgcolor="#CCCCCC"><b>Module</b>&nbsp;
+</td>
+<td class="singleborder  right_separator" align="center" bgcolor="#CCCCCC" colspan="3">&nbsp;<b>Findings</b>&nbsp;
+</td>
+<td class="singleborder right_separator" align="center" bgcolor="#CCCCCC" colspan="2">&nbsp;<b>Files</b></td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC" colspan="2">&nbsp;<b>Lines</b></td>
+</tr>
+<tr>
+<td class="singleborder right_separator" align="center" bgcolor="#CCCCCC"><span style="zoom:1;"></span></td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC">suppressed</td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC">total</td>
+<td class="singleborder right_separator" align="center" bgcolor="#CCCCCC">per 10,000 lines</td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC">checked</td>
+<td class="singleborder right_separator" align="center" bgcolor="#CCCCCC">total</td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC">checked</td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC">total</td>
+</tr>
+<tr class="alternating">
+<td class="singleborder right_separator" align="left">&nbsp;github-client</td>
+<td class="singleborder" align="center">&nbsp;0&nbsp;</td>
+<td class="singleborder" align="center">1&nbsp;</td>
+<td class="singleborder right_separator" align="center">107&nbsp;</td>
+<td class="singleborder" align="center">&nbsp;1&nbsp;</td>
+<td class="singleborder  right_separator" align="center">1&nbsp;</td>
+<td class="singleborder" align="center">&nbsp;93&nbsp;</td>
+<td class="singleborder" align="center">93&nbsp;</td>
+</tr>
+<tr>
+<td class="singleborder  right_separator" align="left" bgcolor="#CCCCCC">&nbsp;<b>Total</b> [0:00:02]
+
+</td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC">&nbsp;<b>0</b>&nbsp;
+</td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC">&nbsp;<b>1</b>&nbsp;
+</td>
+<td class="singleborder right_separator" align="center" bgcolor="#CCCCCC">&nbsp;<b>107</b>&nbsp;
+</td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC"><b>1</b>&nbsp;
+</td>
+<td class="singleborder right_separator" align="center" bgcolor="#CCCCCC"><b>1</b>&nbsp;
+</td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC"><b>93</b>&nbsp;
+</td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC"><b>93</b>&nbsp;
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br><table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table class="header" width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td width="30%">&nbsp;</td>
+<td align="center">
+<div class="small_header" id="cs_title_cat" style="display:block;">All Findings&nbsp;by Category</div>
+<div class="small_header" id="cs_title_sev" style="display:none;">All Findings&nbsp;by Severity</div>
+</td>
+<td align="right" width="30%"><a xmlns:authors="authors" id="cs_link_cat" class="blue_link" href="javascript:sortByCategory()">Category</a>&nbsp;
+|
+&nbsp;<a xmlns:authors="authors" id="cs_link_sev" class="blue_link" href="javascript:sortBySeverity()">Severity</a>&nbsp;&nbsp;&nbsp;
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table xmlns:authors="authors" width="100%" class="header_separator" cellspacing="0" cellpadding="0">
+<tr>
+<td align="center" class="header_separator"></td>
+</tr>
+</table><br xmlns:authors="authors"></td>
+</tr>
+<tr>
+<td align="left">
+<div id="cs_cat" style="display:block;">
+<table width="100%" class="doubleborder" cellpadding="0" cellspacing="0">
+<tr>
+<td class="tree">&nbsp;
+[<b>1</b>]
+&nbsp;&nbsp;<b>OBJ07-J: Sensitive classes must not let themselves be copied</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ07.html&#34;)">(CERT.OBJ07)</a>&nbsp;
+</td>
+</tr>
+<tr>
+<td class="tree_node">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>1</b>]
+&nbsp;&nbsp;Make your classes noncloneable&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ07.MCNC.html&#34;)">(CERT.OBJ07.MCNC-5)</a>&nbsp;
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td align="left">
+<div id="cs_sev" style="display:none;">
+<table width="100%" class="doubleborder" cellpadding="0" cellspacing="0">
+<tr>
+<td class="tree">&nbsp;
+[<b>1</b>]
+&nbsp;&nbsp;<b>Severity&nbsp;5 - Lowest</b></td>
+</tr>
+<tr>
+<td class="tree_node">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>1</b>]
+&nbsp;&nbsp;Make your classes noncloneable&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ07.MCNC.html&#34;)">(CERT.OBJ07.MCNC-5)</a>&nbsp;
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br><table xmlns:authors="authors" width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td width="20%"></td>
+<td width="60%" align="center">
+<div class="small_header">Findings by Author</div>
+</td>
+<td width="20%" align="right"><a class="blue_link" href="#top">Back to Top </a>&nbsp;&nbsp;&nbsp;
+</td>
+</tr>
+</table>
+<table align="center" class="singleborder" width="100%" cellpadding="0" cellspacing="0">
+<tr bgcolor="#CCCCCC">
+<td class="singleborder right_separator" width="50%" align="center"><b>Author</b>&nbsp;
+</td>
+<td class="singleborder" colspan="3" align="center"><b>Findings</b></td>
+</tr>
+<tr bgcolor="#CCCCCC">
+<td class="singleborder right_separator" align="center"><span style="zoom:1;"></span></td>
+<td class="singleborder" align="center">suppressed</td>
+<td class="singleborder" align="center">total</td>
+<td class="singleborder" align="center">recommended</td>
+</tr>
+<tr class="alternating">
+<td class="singleborder right_separator" align="left">&nbsp;<a class="blue_link" href="#cs_dev1">lukea</a>&nbsp;
+</td>
+<td class="singleborder" align="center">&nbsp;0&nbsp;</td>
+<td class="singleborder" align="center">&nbsp;1&nbsp;</td>
+<td class="singleborder" align="center">&nbsp;1&nbsp;</td>
+</tr>
+</table><br><table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td xmlns:authors="authors" style="padding-left:20px;" colspan="2" align="left" nowrap class="tree"><a name="cs_dev1"></a><b>lukea</b>&nbsp;&nbsp;Total Findings
+:
+&nbsp;1
+</td>
+<td xmlns:authors="authors" align="right" class="tree"><a class="blue_link" href="#top">Back to Top </a>&nbsp;&nbsp;&nbsp;
+</td>
+</tr>
+<tr>
+<td colspan="3">
+<table xmlns:authors="authors" width="100%" class="header_separator" cellspacing="0" cellpadding="0">
+<tr>
+<td align="center" class="header_separator"></td>
+</tr>
+</table><br xmlns:authors="authors"></td>
+</tr>
+<tr>
+<td colspan="3" align="left">
+<table width="100%" bgcolor="#FFFFFF" class="doubleborder" cellpadding="0" cellspacing="0">
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="4" class="tree"><b>/github-client/src/main/java/com/spotify/github/GitHubInstant.java</b></td>
+</tr>
+<tr>
+<td width="1%" align="right" class="tree"></td>
+<td width="2%" align="right" valign="top" class="tree"><font class="gray">34:</font>&nbsp;
+</td>
+<td valign="top" class="tree"><span style="white-space: pre-wrap;">'clone()' method is missing</span></td>
+<td style="white-space: nowrap; padding-right:10px;" align="right" valign="top" class="tree"><a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ07.MCNC.html&#34;)">CERT.OBJ07.MCNC-5</a></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td colspan="3"><br></td>
+</tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td width="40%"></td>
+<td width="20%" align="center">
+<div class="small_header">Findings by File</div>
+</td>
+<td align="right" width="40%"><a xmlns:authors="authors" class="gray_link" href="javascript:expandCSDetails()">Expand All</a>&nbsp;&nbsp;&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:collapseCSDetails()">Collapse All</a>&nbsp;&nbsp;&nbsp;<a xmlns:authors="authors" class="blue_link" href="#top">Back to Top </a>&nbsp;&nbsp;&nbsp;
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table xmlns:authors="authors" width="100%" class="header_separator" cellspacing="0" cellpadding="0">
+<tr>
+<td align="center" class="header_separator"></td>
+</tr>
+</table><br xmlns:authors="authors"></td>
+</tr>
+<tr>
+<td>
+<table width="100%" class="doubleborder" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left">
+<ul class="root" id="cs_foldinglist">
+<li id="cs_foldheader" class="tree">&nbsp;<font class="gray">+</font><b>&nbsp;1
+			(0)            	                
+&nbsp;</b><b>Total (Suppressed)</b></li>
+<ul id="cs_foldinglist">
+<li id="cs_foldheader" class="tree">&nbsp;<font class="gray">+</font><b>&nbsp;1
+			(0)            	                
+&nbsp;</b><b>github-client</b></li>
+<ul id="cs_foldinglist">
+<li id="cs_foldheader" class="tree">&nbsp;<font class="gray">+</font><b>&nbsp;1
+			(0)            	                
+&nbsp;</b><b>src</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="cs_foldheader" class="tree">&nbsp;<font class="gray">+</font><b>&nbsp;1
+			(0)            	                
+&nbsp;</b><b>main</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="cs_foldheader" class="tree">&nbsp;<font class="gray">+</font><b>&nbsp;1
+			(0)            	                
+&nbsp;</b><b>java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="cs_foldheader" class="tree">&nbsp;<font class="gray">+</font><b>&nbsp;1
+			(0)            	                
+&nbsp;</b><b>com</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="cs_foldheader" class="tree">&nbsp;<font class="gray">+</font><b>&nbsp;1
+			(0)            	                
+&nbsp;</b><b>spotify</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="cs_foldheader" class="tree">&nbsp;<font class="gray">+</font><b>&nbsp;1
+			(0)            	                
+&nbsp;</b><b>github</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="cs_foldheader" class="tree">&nbsp;<font class="gray">+</font><b>&nbsp;1
+			(0)            	                
+&nbsp;</b><b>GitHubInstant.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0">
+<tr valign="bottom">
+<td width="2%"></td>
+<td width="1%" align="right"></td>
+<td width="2%" align="right" valign="top"><font class="gray">34:&nbsp;</font></td>
+<td valign="top" class="tree"><span style="white-space: pre-wrap;">'clone()' method is missing</span></td>
+<td valign="top" width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">lukea</a>&nbsp;
+</td>
+<td align="right" valign="top" width="10%" nowrap><a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ07.MCNC.html&#34;)">CERT.OBJ07.MCNC-5</a></td>
+</tr>
+</table>
+</li>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br><table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="25%"></td>
+<td align="center">
+<div class="small_header">Active Rules</div>
+</td>
+<td align="right" width="25%"><a xmlns:authors="authors" class="blue_link" href="#top">Back to Top </a>&nbsp;&nbsp;&nbsp;
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table xmlns:authors="authors" width="100%" class="header_separator" cellspacing="0" cellpadding="0">
+<tr>
+<td align="center" class="header_separator"></td>
+</tr>
+</table><br xmlns:authors="authors"></td>
+</tr>
+<tr>
+<td align="left">
+<table width="100%" cellpadding="0" cellspacing="0" class="doubleborder">
+<tr>
+<td>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[154/154]
+&nbsp;SEI CERT Oracle Coding Standard for Java</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.html&#34;)">(CERT)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;IDS00-J: Prevent SQL Injection</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.IDS00.html&#34;)">(CERT.IDS00)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Protect against SQL injection&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.IDS00.TDSQL.html&#34;)">(CERT.IDS00.TDSQL-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[3/3]
+&nbsp;NUM00-J: Detect or prevent integer overflow</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.NUM00.html&#34;)">(CERT.NUM00)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid calculations which result in overflow or NaN&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.NUM00.ICO.html&#34;)">(CERT.NUM00.ICO-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use an integer outside the range of [0, 31] as the amount of a shift&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.NUM00.BSA.html&#34;)">(CERT.NUM00.BSA-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid using compound assignment operators in cases which may cause overflow&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.NUM00.CACO.html&#34;)">(CERT.NUM00.CACO-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[2/2]
+&nbsp;NUM01-J: Do not perform bitwise and arithmetic operations on the same data</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.NUM01.html&#34;)">(CERT.NUM01)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid incorrect shift operations&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.NUM01.BADSHIFT.html&#34;)">(CERT.NUM01.BADSHIFT-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not perform bitwise and arithmetic operations on the same data&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.NUM01.NCBAV.html&#34;)">(CERT.NUM01.NCBAV-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;IDS03-J: Do not log unsanitized user input</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.IDS03.html&#34;)">(CERT.IDS03)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Protect against log forging&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.IDS03.TDLOG.html&#34;)">(CERT.IDS03.TDLOG-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;IDS06-J: Exclude unsanitized uer input from format strings</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.IDS06.html&#34;)">(CERT.IDS06)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensure the correct number of arguments for varargs methods with format strings&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.IDS06.VAFS.html&#34;)">(CERT.IDS06.VAFS-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;IDS07-J: Sanitize untrusted data passed to Runtime.exec() method</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.IDS07.html&#34;)">(CERT.IDS07)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use 'Runtime.exec()'&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.IDS07.EXEC.html&#34;)">(CERT.IDS07.EXEC-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;NUM08-J: Check floating-point inputs for exceptional values</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.NUM08.html&#34;)">(CERT.NUM08)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Check floating-point inputs for exceptional values&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.NUM08.FPEXC.html&#34;)">(CERT.NUM08.FPEXC-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;NUM09-J: Do not use floating-point variables as loop counters</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.NUM09.html&#34;)">(CERT.NUM09)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use floating point variables as loop indices&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.NUM09.FPLI.html&#34;)">(CERT.NUM09.FPLI-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;TSM02-J: Do not use background threads during class initialization</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.TSM02.html&#34;)">(CERT.TSM02)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not call the "start" method of threads from inside a constructor&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.TSM02.CSTART.html&#34;)">(CERT.TSM02.CSTART-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;NUM07-J: Do not attempt comparisons with NaN</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.NUM07.html&#34;)">(CERT.NUM07)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid comparisons to Double.NaN or Float.NaN&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.NUM07.NAN.html&#34;)">(CERT.NUM07.NAN-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[9/9]
+&nbsp;MET12-J: Do not use finalizers</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MET12.html&#34;)">(CERT.MET12)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use 'finalize()' methods to unregister listeners&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MET12.FM.html&#34;)">(CERT.MET12.FM-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not define 'finalize()' method in bean classes&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MET12.MNDF.html&#34;)">(CERT.MET12.MNDF-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not call 'finalize()' explicitly&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MET12.NCF.html&#34;)">(CERT.MET12.NCF-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not overload the 'finalize()' method&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MET12.OF.html&#34;)">(CERT.MET12.OF-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid empty 'finalize()' methods&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MET12.EF.html&#34;)">(CERT.MET12.EF-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Call 'super.finalize()' from 'finalize()'&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MET12.FCF.html&#34;)">(CERT.MET12.FCF-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid redundant 'finalize()' methods which only call the superclass' 'finalize()' method&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MET12.FCSF.html&#34;)">(CERT.MET12.FCSF-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Call 'super.finalize()' in the "finally" block of 'finalize()' methods&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MET12.IFF.html&#34;)">(CERT.MET12.IFF-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Give "finalize()" methods "protected" access&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MET12.MFP.html&#34;)">(CERT.MET12.MFP-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;NUM04-J: Do not use floating-point numbers if precise computation is required</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.NUM04.html&#34;)">(CERT.NUM04)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use "float" and "double" if exact answers are required&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.NUM04.UBD.html&#34;)">(CERT.NUM04.UBD-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;MET11-J: Ensure that keys used in comparison operations are immutable</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MET11.html&#34;)">(CERT.MET11)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensure that keys used in comparison operations are immutable&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MET11.IKICO.html&#34;)">(CERT.MET11.IKICO-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;NUM02-J: Ensure that division and remainder operations do not result in divide by zero errors</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.NUM02.html&#34;)">(CERT.NUM02)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid division by zero&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.NUM02.ZERO.html&#34;)">(CERT.NUM02.ZERO-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;LCK10-J: Use a correct form of the double-checked locking idiom</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.LCK10.html&#34;)">(CERT.LCK10)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid unsafe implementations of the "double-checked locking" pattern&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.LCK10.DCL.html&#34;)">(CERT.LCK10.DCL-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;MET04-J: Do not increase the accessibility of overridden or hidden methods</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MET04.html&#34;)">(CERT.MET04)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not override an instance "private" method&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MET04.OPM.html&#34;)">(CERT.MET04.OPM-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;MET07-J: Never declare a class method that hides a method declared in a superclass or superinterfaces</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MET07.html&#34;)">(CERT.MET07)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not hide inherited "static" member methods&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MET07.AHSM.html&#34;)">(CERT.MET07.AHSM-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;MET06-J: Do not invoke overridable methods in clone()</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MET06.html&#34;)">(CERT.MET06)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Make your 'clone()' method "final" for security&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MET06.CLONE.html&#34;)">(CERT.MET06.CLONE-4)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;MET09-J: Classes that define equals() method must also define hashCode() method</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MET09.html&#34;)">(CERT.MET09)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Override 'Object.hashCode()' when you override 'Object.equals()' and vice versa&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MET09.OVERRIDE.html&#34;)">(CERT.MET09.OVERRIDE-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;TSM00-J: Do not override thread-safe methods with methods that are not thread-safe</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.TSM00.html&#34;)">(CERT.TSM00)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid overriding synchronized methods with non-synchronized methods&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.TSM00.OSNS.html&#34;)">(CERT.TSM00.OSNS-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;MET08-J: Preserve the equality contract when overriding the equals() method</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MET08.html&#34;)">(CERT.MET08)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Make sure implementation of Object.equals(Object) is reflexive&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MET08.EQREFL.html&#34;)">(CERT.MET08.EQREFL-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;TSM01-J: Do not let the this reference escape during object construction</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.TSM01.html&#34;)">(CERT.TSM01)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not let "this" reference escape during construction&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.TSM01.CTRE.html&#34;)">(CERT.TSM01.CTRE-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[2/2]
+&nbsp;VNA03-J: Do not assume that a group of calls to independently atomic methods is atomic</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.VNA03.html&#34;)">(CERT.VNA03)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Make the get method for a field synchronized if the set method is synchronized&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.VNA03.SSUG.html&#34;)">(CERT.VNA03.SSUG-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Access related Atomic variables in a synchronized block&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.VNA03.MRAV.html&#34;)">(CERT.VNA03.MRAV-4)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[2/2]
+&nbsp;VNA00-J: Ensure visibility when accessing shared primitive variables</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.VNA00.html&#34;)">(CERT.VNA00)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensure that nested locks are ordered correctly&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.VNA00.LORD.html&#34;)">(CERT.VNA00.LORD-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Access related Atomic variables in a synchronized block&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.VNA00.MRAV.html&#34;)">(CERT.VNA00.MRAV-4)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[2/2]
+&nbsp;VNA02-J: Ensure that compound operations on shared variables are atomic</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.VNA02.html&#34;)">(CERT.VNA02)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Make the get method for a field synchronized if the set method is synchronized&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.VNA02.SSUG.html&#34;)">(CERT.VNA02.SSUG-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Access related Atomic variables in a synchronized block&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.VNA02.MRAV.html&#34;)">(CERT.VNA02.MRAV-4)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;NUM12-J: Ensure conversions of numeric types to narrower types do not result in lost or misinterpreted data</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.NUM12.html&#34;)">(CERT.NUM12)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not cast primitive data types to lower precision&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.NUM12.CLP.html&#34;)">(CERT.NUM12.CLP-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;SER04-J: Do not allow serialization and deserialization to bypass the security manager</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.SER04.html&#34;)">(CERT.SER04)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enforce 'SecurityManager' checks in methods of 'Serializable' classes&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.SER04.SCSER.html&#34;)">(CERT.SER04.SCSER-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;SER07-J: Do not use the default serialized form for classes with implementation-defined invariants</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.SER07.html&#34;)">(CERT.SER07)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Define a "readResolve" method for all instances of Serializable types&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.SER07.RRSC.html&#34;)">(CERT.SER07.RRSC-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;NUM10-J: Do not construct BigDecimal objects from floating-point literals</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.NUM10.html&#34;)">(CERT.NUM10)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not pass floating point values to the 'BigDecimal' constructor&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.NUM10.BBDCC.html&#34;)">(CERT.NUM10.BBDCC-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;SER01-J: Do not deviate from the proper signatures of serialization methods</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.SER01.html&#34;)">(CERT.SER01)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensure that the 'readObject()' and 'writeObject()' methods have the correct signature&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.SER01.ROWO.html&#34;)">(CERT.SER01.ROWO-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;SER00-J: Enable serialization compatibility during class evolution</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.SER00.html&#34;)">(CERT.SER00)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a 'serialVersionUID' for all 'Serializable' classes&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.SER00.DUID.html&#34;)">(CERT.SER00.DUID-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;SER03-J: Do not serialize unencrypted, sensitive data</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.SER03.html&#34;)">(CERT.SER03)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inspect instance fields of serializable objects to make sure they will not expose sensitive information&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.SER03.SIF.html&#34;)">(CERT.SER03.SIF-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;ENV02-J: Do not trust the values of environment variables</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.ENV02.html&#34;)">(CERT.ENV02)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use the non-portable 'System.getenv()' method&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.ENV02.ENV.html&#34;)">(CERT.ENV02.ENV-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;SER09-J: Do not invoke overridable methods from readObject() method</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.SER09.html&#34;)">(CERT.SER09)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not invoke overridable methods from the readObject() method&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.SER09.VREADOBJ.html&#34;)">(CERT.SER09.VREADOBJ-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;NUM13-J: Avoid loss of precision when converting primitive integers to floating-point</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.NUM13.html&#34;)">(CERT.NUM13)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid implicit casts from integer data types to floating point data types&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.NUM13.AIC.html&#34;)">(CERT.NUM13.AIC-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[2/2]
+&nbsp;MET02-J: Do not use deprecated or obsolete classes or methods</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MET02.html&#34;)">(CERT.MET02)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid calling unsafe deprecated methods of 'Thread' and 'Runtime'&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MET02.THRD.html&#34;)">(CERT.MET02.THRD-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use deprecated APIs&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MET02.DPRAPI.html&#34;)">(CERT.MET02.DPRAPI-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[4/4]
+&nbsp;OBJ05-J: Defensively copy private mutable class members before returning their references</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ05.html&#34;)">(CERT.OBJ05)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enforce returning a defensive copy in 'clone()' methods&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ05.CPCL.html&#34;)">(CERT.OBJ05.CPCL-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not pass user-given mutable objects directly to certain types&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ05.MPT.html&#34;)">(CERT.OBJ05.MPT-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Provide mutable classes with copy functionality&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ05.MUCOP.html&#34;)">(CERT.OBJ05.MUCOP-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not store user-given mutable objects directly into variables&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ05.SMO.html&#34;)">(CERT.OBJ05.SMO-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[4/4]
+&nbsp;OBJ06-J: Defensively copy mutable inputs and mutable internal components</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ06.html&#34;)">(CERT.OBJ06)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enforce returning a defensive copy in 'clone()' methods&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ06.CPCL.html&#34;)">(CERT.OBJ06.CPCL-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not pass user-given mutable objects directly to certain types&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ06.MPT.html&#34;)">(CERT.OBJ06.MPT-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Provide mutable classes with copy functionality&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ06.MUCOP.html&#34;)">(CERT.OBJ06.MUCOP-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not store user-given mutable objects directly into variables&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ06.SMO.html&#34;)">(CERT.OBJ06.SMO-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;OBJ07-J: Sensitive classes must not let themselves be copied</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ07.html&#34;)">(CERT.OBJ07)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Make your classes noncloneable&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ07.MCNC.html&#34;)">(CERT.OBJ07.MCNC-5)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;OBJ08-J: Do not expose private members of an outer class from within a nested class</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ08.html&#34;)">(CERT.OBJ08)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Make all member classes "private"&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ08.INNER.html&#34;)">(CERT.OBJ08.INNER-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;LCK02-J: Do not synchronize on the class object returned by getClass()</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.LCK02.html&#34;)">(CERT.LCK02)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not synchronize on the class object returned by the 'getClass' method&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.LCK02.SGC.html&#34;)">(CERT.LCK02.SGC-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;LCK00-J: Use private final lock objects to synchronize classes that may interact with untrusted code</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.LCK00.html&#34;)">(CERT.LCK00)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not synchronize on "public" fields since doing so may cause deadlocks&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.LCK00.SOPF.html&#34;)">(CERT.LCK00.SOPF-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;OBJ03-J: Prevent heap pollution</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ03.html&#34;)">(CERT.OBJ03)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid conversions from parameterized types to raw types&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ03.AGBPT.html&#34;)">(CERT.OBJ03.AGBPT-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;LCK01-J: Do not synchronize on objects that may be reused</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.LCK01.html&#34;)">(CERT.LCK01)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not synchronize on constant Strings&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.LCK01.SCS.html&#34;)">(CERT.LCK01.SCS-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[5/5]
+&nbsp;OBJ04-J: Provide mutable classes with copy functionality to safely allow passing instances to untrusted code</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ04.html&#34;)">(CERT.OBJ04)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enforce returning a defensive copy in 'clone()' methods&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ04.CPCL.html&#34;)">(CERT.OBJ04.CPCL-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not pass user-given mutable objects directly to certain types&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ04.MPT.html&#34;)">(CERT.OBJ04.MPT-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Provide mutable classes with copy functionality&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ04.MUCOP.html&#34;)">(CERT.OBJ04.MUCOP-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not store user-given mutable objects directly into variables&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ04.SMO.html&#34;)">(CERT.OBJ04.SMO-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Make your 'clone()' method "final" for security&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ04.CLONE.html&#34;)">(CERT.OBJ04.CLONE-4)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;LCK06-J: Do not use an instance lock to protect shared static data</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.LCK06.html&#34;)">(CERT.LCK06)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use an instance lock to protect shared static data&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.LCK06.INSTLOCK.html&#34;)">(CERT.LCK06.INSTLOCK-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;LCK07-J: Avoid deadlock by requesting and releasing locks in the same order</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.LCK07.html&#34;)">(CERT.LCK07)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensure that nested locks are ordered correctly&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.LCK07.LORD.html&#34;)">(CERT.LCK07.LORD-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;LCK04-J: Do not synchronize on a collection view if the backing collection is accessible</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.LCK04.html&#34;)">(CERT.LCK04)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not synchronize on a collection view if the backing collection is accessible&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.LCK04.SOBC.html&#34;)">(CERT.LCK04.SOBC-4)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;LCK05-J: Synchronize access to static fields that can be modified by untrusted code</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.LCK05.html&#34;)">(CERT.LCK05)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inspect accesses to "static" fields which may require synchronization&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.LCK05.IASF.html&#34;)">(CERT.LCK05.IASF-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[2/2]
+&nbsp;LCK08-J: Ensure acrively held locks are released on exceptional conditions</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.LCK08.html&#34;)">(CERT.LCK08)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not abandon unreleased locks&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.LCK08.LOCK.html&#34;)">(CERT.LCK08.LOCK-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Release Locks in a "finally" block&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.LCK08.RLF.html&#34;)">(CERT.LCK08.RLF-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[2/2]
+&nbsp;LCK09-J: Do not perform operations that can block while holding a lock</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.LCK09.html&#34;)">(CERT.LCK09)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use blocking methods while holding a lock&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.LCK09.TSHL.html&#34;)">(CERT.LCK09.TSHL-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not call 'Thread.sleep()' while holding a lock since doing so can cause poor performance and deadlocks&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.LCK09.TSHL2.html&#34;)">(CERT.LCK09.TSHL2-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;SER11-J: Prevent overwriting of externalizable objects</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.SER11.html&#34;)">(CERT.SER11)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid re-initializing fields in the 'readExternal()' method of 'Externalizable' classes&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.SER11.IRX.html&#34;)">(CERT.SER11.IRX-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;MSC02-J: Generate strong random numbers</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MSC02.html&#34;)">(CERT.MSC02)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use 'java.security.SecureRandom' instead of 'java.util.Random' or 'Math.random()'&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MSC02.SRD.html&#34;)">(CERT.MSC02.SRD-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;MSC01-J: Do not use an empty infinite loop</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MSC01.html&#34;)">(CERT.MSC01)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid control statements with empty bodies&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MSC01.EB.html&#34;)">(CERT.MSC01.EB-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;MSC00-J: Use SSLSocket rather than Socket for secure data exchange</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MSC00.html&#34;)">(CERT.MSC00)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use the SSL-enabled version of classes when possible&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MSC00.USC.html&#34;)">(CERT.MSC00.USC-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;TPS00-J: Use thread pools to enable graceful degradation of service during traffic bursts</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.TPS00.html&#34;)">(CERT.TPS00)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not call the 'start()' method directly on Thread class instances&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.TPS00.ISTART.html&#34;)">(CERT.TPS00.ISTART-4)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;DCL00-J: Prevent class initialization cycles</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.DCL00.html&#34;)">(CERT.DCL00)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensure that files do not contain cyclical dependencies&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.DCL00.ACD.html&#34;)">(CERT.DCL00.ACD-4)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;DCL02-J: Do not modify the collector's elements during an enhanced for statement</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.DCL02.html&#34;)">(CERT.DCL02)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not modify collection while iterating over it&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.DCL02.ITMOD.html&#34;)">(CERT.DCL02.ITMOD-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[3/3]
+&nbsp;FIO04-J: Release resources when they are no longer needed</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.FIO04.html&#34;)">(CERT.FIO04)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensure resources are deallocated&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.FIO04.LEAKS.html&#34;)">(CERT.FIO04.LEAKS-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Close all "java.io.Closeable" resources in a "finally" block&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.FIO04.CCR.html&#34;)">(CERT.FIO04.CCR-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Close input and output resources in "finally" blocks&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.FIO04.CIO.html&#34;)">(CERT.FIO04.CIO-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;FIO05-J: Do not expose buffers created using the wrap() or duplicate() methods to untrusted code</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.FIO05.html&#34;)">(CERT.FIO05)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not expose data wrapped by a buffer to untrusted code&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.FIO05.BUFEXP.html&#34;)">(CERT.FIO05.BUFEXP-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;FIO06-J: Do not create multiple buffered wrappers on a single byte of character strream</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.FIO06.html&#34;)">(CERT.FIO06)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not create multiple buffered wrappers on a single byte or character stream&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.FIO06.MULBUF.html&#34;)">(CERT.FIO06.MULBUF-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;FIO07.JDo not let external process block on IO buffers</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.FIO07.html&#34;)">(CERT.FIO07)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use 'Runtime.exec()'&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.FIO07.EXEC.html&#34;)">(CERT.FIO07.EXEC-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;FIO08-J: Distinguish between characters or bytes read from a stream and -1</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.FIO08.html&#34;)">(CERT.FIO08)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Check the return value of methods which read or skip input&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.FIO08.CRRV.html&#34;)">(CERT.FIO08.CRRV-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;FIO09-J: Do not rely on the write() method to output integers outside the range 0 - 255</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.FIO09.html&#34;)">(CERT.FIO09)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not rely on the write() method to output integers outside the range 0 to 255&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.FIO09.ARGWRITE.html&#34;)">(CERT.FIO09.ARGWRITE-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[2/2]
+&nbsp;FIO03-J: Remove temporary files before termination</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.FIO03.html&#34;)">(CERT.FIO03)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove temporary files before termination&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.FIO03.REMTMP.html&#34;)">(CERT.FIO03.REMTMP-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid temporary files&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.FIO03.ATF.html&#34;)">(CERT.FIO03.ATF-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[3/3]
+&nbsp;ERR01-J: Do not allow exceptions to expose sensitive data</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.ERR01.html&#34;)">(CERT.ERR01)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not call the 'printStackTrace()' method of "Throwable" objects&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.ERR01.ACPST.html&#34;)">(CERT.ERR01.ACPST-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Catch all exceptions which may be thrown within Servlet methods&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.ERR01.CETS.html&#34;)">(CERT.ERR01.CETS-4)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid writing to Consoles&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.ERR01.ACW.html&#34;)">(CERT.ERR01.ACW-5)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;FIO16-J: Canonicalize path names before validating them.</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.FIO16.html&#34;)">(CERT.FIO16)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Canonicalize all data before validation&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.FIO16.CDBV.html&#34;)">(CERT.FIO16.CDBV-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[2/2]
+&nbsp;ERR00-J: Do not suppress or ignore checked exceptions</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.ERR00.html&#34;)">(CERT.ERR00)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensure all exceptions are either logged with a standard logger or rethrown&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.ERR00.LGE.html&#34;)">(CERT.ERR00.LGE-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use a caught exception in the "catch" block&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.ERR00.UCATCH.html&#34;)">(CERT.ERR00.UCATCH-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[2/2]
+&nbsp;ERR09-J: Do not allow untrusted code to terminate the JVM</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.ERR09.html&#34;)">(CERT.ERR09)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not stop the JVM in a web component&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.ERR09.JVM.html&#34;)">(CERT.ERR09.JVM-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not call methods which terminates Java Virtual Machine&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.ERR09.EXIT.html&#34;)">(CERT.ERR09.EXIT-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[2/2]
+&nbsp;ERR07-J: Do not throw RuntimeExceptions, Exceptions or Throwable</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.ERR07.html&#34;)">(CERT.ERR07)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not throw exception types which are too general or are unchecked exceptions&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.ERR07.NTERR.html&#34;)">(CERT.ERR07.NTERR-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid declaring methods to throw general or unchecked Exception types&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.ERR07.NTX.html&#34;)">(CERT.ERR07.NTX-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;ERR08-J: Do not catch NullPointerExceptions or any of its ancestors</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.ERR08.html&#34;)">(CERT.ERR08)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not catch 'NullPointerException'&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.ERR08.NCNPE.html&#34;)">(CERT.ERR08.NCNPE-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[2/2]
+&nbsp;ERR05-J: Do not let checked exceptions escape from a finally block</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.ERR05.html&#34;)">(CERT.ERR05)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid using 'return's inside 'finally blocks if thare are other 'return's inside the try-catch block&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.ERR05.ARCF.html&#34;)">(CERT.ERR05.ARCF-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not exit "finally" blocks abruptly&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.ERR05.ATSF.html&#34;)">(CERT.ERR05.ATSF-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;JNI01-J: Safely invoke standard APIs that perform tasks using the immediate caller's class loader instance (LoadLibrary)</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.JNI01.html&#34;)">(CERT.JNI01)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Protect against Library injection&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.JNI01.TDLIB.html&#34;)">(CERT.JNI01.TDLIB-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;ERR03-J: Restore prior object state on method failure</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.ERR03.html&#34;)">(CERT.ERR03)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Restore prior object state on method failure&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.ERR03.REVOBJ.html&#34;)">(CERT.ERR03.REVOBJ-5)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;JNI00-J: Define wrappers around native methods</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.JNI00.html&#34;)">(CERT.JNI00)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use wrapper methods to secure native methods&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.JNI00.NATIW.html&#34;)">(CERT.JNI00.NATIW-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[2/2]
+&nbsp;ERR04-J: Do not complete abruptly from finally block</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.ERR04.html&#34;)">(CERT.ERR04)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid using 'return's inside 'finally blocks if thare are other 'return's inside the try-catch block&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.ERR04.ARCF.html&#34;)">(CERT.ERR04.ARCF-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not exit "finally" blocks abruptly&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.ERR04.ATSF.html&#34;)">(CERT.ERR04.ATSF-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;MSC07-J: Prevent multiple instantiations of singleton objects</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MSC07.html&#34;)">(CERT.MSC07)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Make lazy initializations thread-safe&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MSC07.ILI.html&#34;)">(CERT.MSC07.ILI-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;MSC06-J: Do not modify the underlying collection when an iteration is in progress</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MSC06.html&#34;)">(CERT.MSC06)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not modify collection while iterating over it&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MSC06.ITMOD.html&#34;)">(CERT.MSC06.ITMOD-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;MSC04-J: Do not leak memory</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MSC04.html&#34;)">(CERT.MSC04)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensure resources are deallocated&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MSC04.LEAKS.html&#34;)">(CERT.MSC04.LEAKS-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[3/3]
+&nbsp;MSC03-J: Never hard code sensitive information</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MSC03.html&#34;)">(CERT.MSC03)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid hard-coding the arguments to certain methods&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MSC03.AHCA.html&#34;)">(CERT.MSC03.AHCA-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid using hard-coded cryptographic keys&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MSC03.HCCK.html&#34;)">(CERT.MSC03.HCCK-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid passing hardcoded usernames/passwords/URLs to database connection methods&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.MSC03.HCCS.html&#34;)">(CERT.MSC03.HCCS-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;FIO12-J: Provide methods to read a write little-endian data</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.FIO12.html&#34;)">(CERT.FIO12)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Provide methods to read and write little-endian data&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.FIO12.PMRWLED.html&#34;)">(CERT.FIO12.PMRWLED-4)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;STR00-J: Don't form strings containing partial characters from variable-width encodings</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.STR00.html&#34;)">(CERT.STR00)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use String concatenation in an Internationalized environment&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.STR00.COS.html&#34;)">(CERT.STR00.COS-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[4/4]
+&nbsp;FIO13-J: Do not log sensitive information outside a trusted boundary</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.FIO13.html&#34;)">(CERT.FIO13)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not log confidential or sensitive information&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.FIO13.CONSEN.html&#34;)">(CERT.FIO13.CONSEN-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid logging sensitive Hibernate-related information at the 'info' level in 'log4j.properties' files&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.FIO13.LHII.html&#34;)">(CERT.FIO13.LHII-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not pass exception messages into output in order to prevent the application from leaking sensitive information&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.FIO13.PEO.html&#34;)">(CERT.FIO13.PEO-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prevent exposure of sensitive data&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.FIO13.SENS.html&#34;)">(CERT.FIO13.SENS-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;STR01-J: Do not assume that a Java char fully represents a Unicode code point</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.STR01.html&#34;)">(CERT.STR01)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not assume that a Java char fully represents a Unicode code point&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.STR01.NCUCP.html&#34;)">(CERT.STR01.NCUCP-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[3/3]
+&nbsp;FIO14-J: Perform proper cleanup at program termination</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.FIO14.html&#34;)">(CERT.FIO14)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Close all "java.io.Closeable" resources in a "finally" block&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.FIO14.CCR.html&#34;)">(CERT.FIO14.CCR-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Close input and output resources in "finally" blocks&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.FIO14.CIO.html&#34;)">(CERT.FIO14.CIO-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Close resources as early as possible&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.FIO14.CRWD.html&#34;)">(CERT.FIO14.CRWD-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[2/2]
+&nbsp;STR02-J: Specify an appropriate locale when comparing locale-dependent data</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.STR02.html&#34;)">(CERT.STR02)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use the optional java.util.Locale parameter&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.STR02.CCL.html&#34;)">(CERT.STR02.CCL-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not call 'Character.toLowerCase(char)' or 'Character.toUpperCase(char)' in an internationalized environment&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.STR02.CTLC.html&#34;)">(CERT.STR02.CTLC-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;OBJ09-J: Compare classes and not class names</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ09.html&#34;)">(CERT.OBJ09)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not compare Class objects by name&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ09.CMP.html&#34;)">(CERT.OBJ09.CMP-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;SEC04-J: Protect sensitive operations with security manager checks</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.SEC04.html&#34;)">(CERT.SEC04)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enforce 'SecurityManager' checks before setting or getting fields&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.SEC04.SCF.html&#34;)">(CERT.SEC04.SCF-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;SEC03-J: Do not load trusted classes after allowing untrusted code to load in arbitrary classes</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.SEC03.html&#34;)">(CERT.SEC03)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not access the class loader in a web component&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.SEC03.ACL.html&#34;)">(CERT.SEC03.ACL-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;SEC05-J: Do not use reflection to increase accessibility of classes, methods or fields</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.SEC05.html&#34;)">(CERT.SEC05)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid using reflection methods&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.SEC05.ARM.html&#34;)">(CERT.SEC05.ARM-4)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[2/2]
+&nbsp;EXP00-J: Do not ignore values returned by methods</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.EXP00.html&#34;)">(CERT.EXP00)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid "try", "catch" and "finally" blocks with empty bodies&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.EXP00.AECB.html&#34;)">(CERT.EXP00.AECB-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensure method and constructor return values are used&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.EXP00.NASSIG.html&#34;)">(CERT.EXP00.NASSIG-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;EXP02-J: Do not use the Object.equals() method to compare two arrays</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.EXP02.html&#34;)">(CERT.EXP02)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use '==' or '!=' to compare objects&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.EXP02.UEIC.html&#34;)">(CERT.EXP02.UEIC-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;SEC02-J: Do not base security checks on untrusted sources</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.SEC02.html&#34;)">(CERT.SEC02)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Protect against Reflection injection&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.SEC02.TDRFL.html&#34;)">(CERT.SEC02.TDRFL-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[2/2]
+&nbsp;EXP01-J: Do not use a null in a case where an object is required</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.EXP01.html&#34;)">(CERT.EXP01)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid NullPointerException&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.EXP01.NP.html&#34;)">(CERT.EXP01.NP-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensure that dereferenced variables match variables which were previously checked for "null"&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.EXP01.NCMD.html&#34;)">(CERT.EXP01.NCMD-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;SEC01-J: Do not allow tainted variables in privileged blocks</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.SEC01.html&#34;)">(CERT.SEC01)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid operating on tainted data in privileged blocks&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.SEC01.PRIVIL.html&#34;)">(CERT.SEC01.PRIVIL-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[2/2]
+&nbsp;OBJ10-J: Do not use public static nonfinal variables</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ10.html&#34;)">(CERT.OBJ10)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid referencing mutable fields&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ10.RMO.html&#34;)">(CERT.OBJ10.RMO-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inspect 'static' fields which may have intended to be declared 'static final'&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ10.SPFF.html&#34;)">(CERT.OBJ10.SPFF-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;OBJ11-J: Be wary of letting constructors throw exceptions</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ11.html&#34;)">(CERT.OBJ11)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not throw exceptions from constructors of "public" non-"final" classes&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.OBJ11.EPNFC.html&#34;)">(CERT.OBJ11.EPNFC-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;IDS11-J: Perform any string modifications before validation</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.IDS11.html&#34;)">(CERT.IDS11)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Validate all dangerous data&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.IDS11.VPPD.html&#34;)">(CERT.IDS11.VPPD-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;THI00-J: Do not invoke Thread::run()</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.THI00.html&#34;)">(CERT.THI00)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not call the 'run()' method directly on classes extending 'java.lang.Thread' or implementing 'java.lang.Runnable'&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.THI00.IRUN.html&#34;)">(CERT.THI00.IRUN-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;THI02-J: Notify all waiting threads rather than a single thread</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.THI02.html&#34;)">(CERT.THI02)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use 'notify()'; use 'notifyAll()' instead so that all waiting threads will be notified&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.THI02.ANF.html&#34;)">(CERT.THI02.ANF-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;THI01-J: Do not invode ThreadGroup methods</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.THI01.html&#34;)">(CERT.THI01)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use variables of the unsafe type 'java.lang.ThreadGroup'&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.THI01.AUTG.html&#34;)">(CERT.THI01.AUTG-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;IDS16-J: Prevent XML injection</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.IDS16.html&#34;)">(CERT.IDS16)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Protect against XML data injection&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.IDS16.TDXML.html&#34;)">(CERT.IDS16.TDXML-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;EXP03-J: Do not use the equality operators when comparing boxed values</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.EXP03.html&#34;)">(CERT.EXP03)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use '==' or '!=' to compare objects&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.EXP03.UEIC.html&#34;)">(CERT.EXP03.UEIC-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;EXP05-J: Do not follow a write by a subsequent write or read of the same object within an expression</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.EXP05.html&#34;)">(CERT.EXP05)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid using increment or decrement operators in nested expressions&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.EXP05.CID.html&#34;)">(CERT.EXP05.CID-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;THI03-J: Always invoke wait() and await() methods inside a loop</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.THI03.html&#34;)">(CERT.THI03)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Call 'wait()' and 'await()' only inside a loop that tests the liveness condition&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.THI03.UWIL.html&#34;)">(CERT.THI03.UWIL-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;THI05-J: Do not use Thread::stop() to terminate threads.</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.THI05.html&#34;)">(CERT.THI05)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid calling unsafe deprecated methods of 'Thread' and 'Runtime'&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/Users/lukea/OneDrive/Documents/Parasoft%20Jtest/jtest/rules/doc/CERT.THI05.THRD.html&#34;)">(CERT.THI05.THRD-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div><br><a name="berr"></a><table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td width="25%"></td>
+<td align="center">
+<div class="small_header">Setup Problems</div>
+</td>
+<td align="right" width="25%" valign="bottom"><a xmlns:textutil="textutil" xmlns:authors="authors" class="blue_link" href="#top">Back to Top </a>&nbsp;&nbsp;&nbsp;
+</td>
+</tr>
+</table><br><table xmlns:textutil="textutil" xmlns:authors="authors" width="100%" class="header_separator" cellspacing="0" cellpadding="0">
+<tr>
+<td align="center" class="header_separator"></td>
+</tr>
+</table><br xmlns:textutil="textutil" xmlns:authors="authors"><table width="100%" cellpadding="0" cellspacing="0" class="doubleborder" border="0" bordercolor="#CBCBCB">
+<tr>
+<td align="left" style="padding-left:10px" class="tree"><b>
+[ERROR]
+&nbsp;Project compilation problems:</b></td>
+</tr>
+<tr>
+<td align="left" style="padding-top:5px;padding-bottom:5px" class="tree">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td><pre class="tree" style="margin:5px 5px 3px 5px;white-space:pre-wrap;">Project 'github-client' contains compilation problems</pre></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="left" style="padding-left:10px" class="tree"><b>
+[WARNING]
+&nbsp;Compilation setup problems:</b></td>
+</tr>
+<tr>
+<td align="left" style="padding-top:5px;padding-bottom:5px" class="tree">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td><pre class="tree" style="margin:5px 5px 3px 5px;white-space:pre-wrap;">Compilation error during Static Analysis:
+C:\Users\lukea\IdeaProjects\github-java-client\src\main\java\com\spotify\github\CloseTracking.java:34: ImmutableCloseTracking cannot be resolved to a type
+</pre></td>
+</tr>
+<tr>
+<td><pre class="tree" style="margin:5px 5px 3px 5px;white-space:pre-wrap;">Compilation error during Static Analysis:
+C:\Users\lukea\IdeaProjects\github-java-client\src\main\java\com\spotify\github\http\Link.java:43: ImmutableLink cannot be resolved to a type
+</pre></td>
+</tr>
+<tr>
+<td><pre class="tree" style="margin:5px 5px 3px 5px;white-space:pre-wrap;">Compilation error during Static Analysis:
+C:\Users\lukea\IdeaProjects\github-java-client\src\main\java\com\spotify\github\http\Pagination.java:32: ImmutablePagination cannot be resolved to a type
+</pre></td>
+</tr>
+<tr>
+<td><pre class="tree" style="margin:5px 5px 3px 5px;white-space:pre-wrap;">Compilation error during Static Analysis:
+C:\Users\lukea\IdeaProjects\github-java-client\src\main\java\com\spotify\github\Links.java:32: ImmutableLinks cannot be resolved to a type
+</pre></td>
+</tr>
+<tr>
+<td><pre class="tree" style="margin:5px 5px 3px 5px;white-space:pre-wrap;">Compilation error during Static Analysis:
+C:\Users\lukea\IdeaProjects\github-java-client\src\main\java\com\spotify\github\UpdateTracking.java:31: ImmutableUpdateTracking cannot be resolved to a type
+</pre></td>
+</tr>
+<tr>
+<td><pre class="tree" style="margin:5px 5px 3px 5px;white-space:pre-wrap;">Compilation error during Static Analysis:
+C:\Users\lukea\IdeaProjects\github-java-client\src\main\java\com\spotify\github\v3\activity\events\BaseEvent.java:35: ImmutableBaseEvent cannot be resolved to a type
+</pre></td>
+</tr>
+<tr>
+<td><pre class="tree" style="margin:5px 5px 3px 5px;white-space:pre-wrap;">Compilation error during Static Analysis:
+C:\Users\lukea\IdeaProjects\github-java-client\src\main\java\com\spotify\github\v3\activity\events\CommitCommentEvent.java:33: ImmutableCommitCommentEvent cannot be resolved to a type
+</pre></td>
+</tr>
+<tr>
+<td><pre class="tree" style="margin:5px 5px 3px 5px;white-space:pre-wrap;">Compilation error during Static Analysis:
+C:\Users\lukea\IdeaProjects\github-java-client\src\main\java\com\spotify\github\v3\Milestone.java:36: ImmutableMilestone cannot be resolved to a type
+</pre></td>
+</tr>
+<tr>
+<td><pre class="tree" style="margin:5px 5px 3px 5px;white-space:pre-wrap;">Compilation error during Static Analysis:
+C:\Users\lukea\IdeaProjects\github-java-client\src\main\java\com\spotify\github\v3\Team.java:35: ImmutableTeam cannot be resolved to a type
+</pre></td>
+</tr>
+<tr>
+<td><pre class="tree" style="margin:5px 5px 3px 5px;white-space:pre-wrap;">Compilation error during Static Analysis:
+C:\Users\lukea\IdeaProjects\github-java-client\src\main\java\com\spotify\github\v3\User.java:34: ImmutableUser cannot be resolved to a type
+</pre></td>
+</tr>
+<tr>
+<td><pre style="margin:5px 5px 3px 5px;white-space:pre-wrap;">...</pre></td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br><br></td>
+</tr>
+</table><script language="JavaScript">
+    if(document.getElementById("cs_link_cat") != null) {
+       document.getElementById("cs_link_cat").className="gray_red_link";
+    }
+    if(document.getElementById("cs_link_cattrue") != null) {
+       document.getElementById("cs_link_cattrue").className="gray_red_link";
+    }
+    </script></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
